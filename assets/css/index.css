@@ -109,6 +109,12 @@ img {
   overflow: hidden;
 }
 
+.section__info .info__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .section__info .info__content {
   padding: 46px 49px;
   background-color: #f4f0ea;
@@ -158,6 +164,53 @@ img {
 
   .section__info .info__item:nth-child(even) .info__title {
     margin-bottom: 40px;
+  }
+}
+
+/* Tablet */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  /* section about */
+  .section__about .section__title {
+    font-size: 36px;
+    margin-bottom: 36px;
+  }
+
+  .section__about .gallery {
+    gap: 16px;
+    margin-bottom: 36px;
+  }
+
+  .section__about .section__content .text {
+    font-size: 16px;
+    padding-inline: 16px;
+  }
+
+  /* section info */
+  .section__info .info__content {
+    padding: 40px 32px;
+  }
+
+  .section__info .info__title {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+
+  .section__info .info__list li + li {
+    margin-top: 20px;
+  }
+
+  .section__info .info__headline {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  .section__info .info__text {
+    font-size: 16px;
+    line-height: 1.54;
+  }
+
+  .section__info .info__item:nth-child(even) .info__text {
+    line-height: 1.52;
   }
 }
 
