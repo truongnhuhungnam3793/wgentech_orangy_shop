@@ -87,6 +87,7 @@ img {
 /* section info */
 .section__info {
   color: #1f1f1f;
+  padding-bottom: 80px;
 }
 
 .section__info .section__content {
@@ -102,14 +103,9 @@ img {
   margin-top: 8px;
 }
 
-.section__info .info__item:nth-child(odd) {
-  flex-direction: row-reverse;
-}
-
 .section__info .info__content,
 .section__info .info__image {
   border-radius: 24px;
-  width: 50%;
   overflow: hidden;
 }
 
@@ -141,23 +137,33 @@ img {
   line-height: 1.572;
 }
 
+.section__info .info__item:nth-child(even) .info__text {
+  line-height: 1.52;
+}
+
 /* Not Mobile */
 @media only screen and (min-width: 769px) {
+  .section__info .info__item:nth-child(odd) {
+    flex-direction: row-reverse;
+  }
+
+  .section__info .info__content,
+  .section__info .info__image {
+    width: 50%;
+  }
+
   .section__info .info__item:nth-child(even) .info__content {
     padding-block: 67px;
   }
-  
+
   .section__info .info__item:nth-child(even) .info__title {
     margin-bottom: 40px;
-  }
-  
-  .section__info .info__item:nth-child(even) .info__text {
-    line-height: 1.52;
   }
 }
 
 /* Mobile */
 @media only screen and (max-width: 768px) {
+  /* section about */
   .section__about {
     padding-block: 40px;
   }
@@ -170,7 +176,7 @@ img {
 
   .section__about .gallery {
     padding-inline: 8px;
-    margin-bottom: 23px;
+    margin-bottom: 27px;
     gap: 4px;
   }
 
@@ -178,5 +184,55 @@ img {
     font-size: 14px;
     line-height: 1.54;
     padding-inline: 11px;
+  }
+
+  /* section info */
+  .section__info {
+    padding-bottom: 40px;
+  }
+
+  .section__info .info__item {
+    flex-direction: column;
+  }
+
+  .section__info .info__content,
+  .section__info .info__image {
+    border-radius: 16px;
+  }
+
+  .section__info .section__content {
+    padding-inline: 8px;
+  }
+
+  .section__info .info__list li + li {
+    margin-top: 16px;
+  }
+
+  .section__info .info__item:nth-child(odd) .info__content {
+    padding-block: 34px 42px;
+  }
+
+  .section__info .info__item:nth-child(even) .info__title {
+    font-family: "Lato", sans-serif;
+  }
+
+  .section__info .info__item:nth-child(even) .info__text {
+    line-height: 1.54;
+  }
+
+  .section__info .info__content {
+    padding: 20px 18px;
+    justify-content: center;
+  }
+
+  .section__info .info__title {
+    font-size: 32px;
+    line-height: 1.313;
+    margin-bottom: 16px;
+  }
+
+  .section__info .info__headline {
+    font-size: 18px;
+    line-height: 1.7;
   }
 }
