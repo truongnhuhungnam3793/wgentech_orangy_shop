@@ -19,10 +19,16 @@
         <div class="section__content">
           <div class="gallery">
             <div class="gallery__item">
-              <img src="./assets/images/1.jpg" alt="Gallery Image 1" />
+              <picture>
+                <source srcset='./assets/images/1-sp.jpg' media='(max-width: 767.98px)'>
+                <img src='./assets/images/1.jpg' alt='Gallery Image 1' loading='lazy'>
+              </picture>
             </div>
             <div class="gallery__item">
-              <img src="./assets/images/2.jpg" alt="Gallery Image 2" />
+              <picture>
+                <source srcset='./assets/images/2-sp.jpg' media='(max-width: 767.98px)'>
+                <img src='./assets/images/2.jpg' alt='Gallery Image 2' loading='lazy'>
+              </picture>
             </div>
           </div>
           <p class="text text--center font-lato">

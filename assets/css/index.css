@@ -4,21 +4,33 @@ html {
   font-size: 16px;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
-body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
   margin: 0;
   padding: 0;
   font-weight: 400;
   font-optical-sizing: auto;
   font-family: "Lora", serif;
   font-style: normal;
-  color: #2C2A29;
+  color: #2c2a29;
 }
 
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
 
@@ -56,9 +68,9 @@ img {
 .section__about .gallery {
   padding-inline: 10px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(379px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 32px;
-  margin-bottom: 47px
+  margin-bottom: 47px;
 }
 
 .section__about .gallery__item {
@@ -68,4 +80,29 @@ img {
 
 .section__about .section__content .text {
   line-height: 1.32;
+}
+
+/* Mobile */
+@media only screen and (max-width: 768px) {
+  .section__about {
+    padding-block: 40px;
+  }
+
+  .section__about .section__title {
+    color: #1F1F1F;
+    font-size: 32px;
+    margin-bottom: 27px;
+  }
+
+  .section__about .gallery {
+    padding-inline: 8px;
+    margin-bottom: 23px;
+    gap: 4px;
+  }
+
+  .section__about .section__content .text {
+    font-size: 14px;
+    line-height: 1.54;
+    padding-inline: 11px;
+  }
 }
