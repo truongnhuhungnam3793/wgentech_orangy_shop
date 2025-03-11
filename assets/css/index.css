@@ -80,7 +80,7 @@ img {
   overflow: hidden;
 }
 
-.section__about .section__content .text {
+.section__about .section__content .section__text {
   line-height: 1.32;
 }
 
@@ -92,6 +92,8 @@ img {
 
 .section__info .section__content {
   padding-inline: 32px;
+  max-width: 1440px;
+  margin-inline: auto;
 }
 
 .section__info .info__item {
@@ -180,7 +182,7 @@ img {
     margin-bottom: 36px;
   }
 
-  .section__about .section__content .text {
+  .section__about .section__content .section__text {
     font-size: 16px;
     padding-inline: 16px;
   }
@@ -233,7 +235,7 @@ img {
     gap: 4px;
   }
 
-  .section__about .section__content .text {
+  .section__about .section__content .section__text {
     font-size: 14px;
     line-height: 1.54;
     padding-inline: 11px;
