@@ -26,3 +26,18 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+/* utilities class */
+.text--center {
+  text-align: center;
+}
+
+/* section about */
+.section__about {
+  padding-block: 80px;
+}
+
+.section__about .section__title {
+  font-size: 40px;
+  line-height: 1.35;
+}
