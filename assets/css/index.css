@@ -2,6 +2,7 @@
 html {
   box-sizing: border-box;
   font-size: 16px;
+  font-family: "Lora", serif;
 }
 
 *,
@@ -24,9 +25,9 @@ ul {
   padding: 0;
   font-weight: 400;
   font-optical-sizing: auto;
-  font-family: "Lora", serif;
   font-style: normal;
   color: #2c2a29;
+  line-height: 1.5;
 }
 
 ol,
@@ -37,6 +38,7 @@ ul {
 img {
   max-width: 100%;
   height: auto;
+  display: block;
 }
 
 /* utilities class */
@@ -70,7 +72,7 @@ img {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 32px;
-  margin-bottom: 47px;
+  margin-bottom: 51px;
 }
 
 .section__about .gallery__item {
@@ -82,6 +84,78 @@ img {
   line-height: 1.32;
 }
 
+/* section info */
+.section__info {
+  color: #1f1f1f;
+}
+
+.section__info .section__content {
+  padding-inline: 32px;
+}
+
+.section__info .info__item {
+  display: flex;
+  gap: 8px;
+}
+
+.section__info .info__item + .info__item {
+  margin-top: 8px;
+}
+
+.section__info .info__item:nth-child(odd) {
+  flex-direction: row-reverse;
+}
+
+.section__info .info__content,
+.section__info .info__image {
+  border-radius: 24px;
+  width: 50%;
+  overflow: hidden;
+}
+
+.section__info .info__content {
+  padding: 46px 49px;
+  background-color: #f4f0ea;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.section__info .info__title {
+  font-size: 64px;
+  line-height: 1.16;
+  margin-bottom: 24px;
+}
+
+.section__info .info__list li + li {
+  margin-top: 24px;
+}
+
+.section__info .info__headline {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.section__info .info__text {
+  font-size: 14px;
+  line-height: 1.572;
+}
+
+/* Not Mobile */
+@media only screen and (min-width: 769px) {
+  .section__info .info__item:nth-child(even) .info__content {
+    padding-block: 67px;
+  }
+  
+  .section__info .info__item:nth-child(even) .info__title {
+    margin-bottom: 40px;
+  }
+  
+  .section__info .info__item:nth-child(even) .info__text {
+    line-height: 1.52;
+  }
+}
+
 /* Mobile */
 @media only screen and (max-width: 768px) {
   .section__about {
@@ -89,7 +163,7 @@ img {
   }
 
   .section__about .section__title {
-    color: #1F1F1F;
+    color: #1f1f1f;
     font-size: 32px;
     margin-bottom: 27px;
   }
